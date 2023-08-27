@@ -1,3 +1,5 @@
 # studying_python
 
-[ ]Variables are Memory References
+- [ ] Task 1
+- [x] Task 2 (completed)
+- [ ] Task 3
