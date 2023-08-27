@@ -1,5 +1,7 @@
 # studying_python
 
-- [ ] Task 1
-- [x] Task 2 (completed)
-- [ ] Task 3
+- [ ] Variables are Memory References
+- [ ] Reference Counting
+- [ ] Garbage Collection
+- [ ] Dynamic vs Static Typing
+- [ ] Variable Re-Assignment
