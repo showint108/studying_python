@@ -161,7 +161,7 @@
 - [ ] Updating, Merging, and Copying - Lecture
 - [ ] Custom Classes and Hashing - Lecture
 
-### sets
+##### sets
 - [ ] Basic Set Theory
 - [ ] Python Sets
 - [ ] Creating Sets - Lecture
