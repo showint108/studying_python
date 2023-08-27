@@ -1,6 +1,6 @@
 # studying_python
 
-# variables and memory
+##### variables and memory
 - [ ] Variables are Memory References
 - [ ] Reference Counting
 - [ ] Garbage Collection
