@@ -34,7 +34,7 @@
 - [ ] Comparison Operators
 
 ##### function parameters
-- [ ] Argument vs Parameter
+- [x] Argument vs Parameter
 - [ ] Positional and Keyword Arguments - Lecture
 - [ ] Unpacking Iterables - Lecture
 - [ ] *args - Lecture
