@@ -35,7 +35,7 @@
 
 ##### function parameters
 - [x] Argument vs Parameter
-- [ ] Positional and Keyword Arguments - Lecture
+- [x] Positional and Keyword Arguments - Lecture
 - [ ] Unpacking Iterables - Lecture
 - [ ] *args - Lecture
 - [ ] Keyword Arguments - Lecture
