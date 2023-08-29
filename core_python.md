@@ -116,3 +116,109 @@ greet("Bob", 28)  # Overrides the default age value
 def greet(name, greeting="Hello"):
     print(greeting + ", " + name + "!")
 ```
+
+## Quick into into tuples
+
+- Tuples are ordered, immutable sequences, similar to lists, but they are defined using parentheses ().
+- Tuples can contain elements of different types, and they are commonly used to group related pieces of data.  
+- To define a tuple, you use parentheses () and separate the elements with commas:
+```python
+# A tuple with three elements
+my_tuple = (1, 2, 3)
+```
+- If you want to define a tuple with a single element, you need to include a comma after the element. This is because parentheses alone would be interpreted as an expression, not a tuple.
+```python
+# Tuple with a single element
+single_element_tuple = (42,)
+```
+- An empty tuple is defined by using just an empty set of parentheses:
+```python
+# Empty tuple
+empty_tuple = ()
+```
+
+## Iterable and Iterator
+
+- An iterable is any Python object capable of returning its elements one at a time, allowing them to be iterated (looped) over using a for loop, while loop, or other iteration mechanisms.
+- Common examples of iterables include lists, tuples, strings, dictionaries, and sets.
+
+- An iterator in Python is an object that can be used to iterate over a sequence of elements.
+- Iterators are created using the iter() function, and they can be iterated over using a for loop.
+
+```python
+list1 = ["apple", "banana", "cherry"]
+
+# Create an iterator for the list
+iterator = iter(list1)
+
+# Print the first element in the iterator
+print(next(iterator))
+print(next(iterator))
+print(next(iterator))
+```
+- This code will print the first element in the list, which is "apple", then the second, then the third.
+
+- Iterators can also be used to iterate over strings, files, and other iterable objects.
+
+
+## Unpacking Iterables
+
+- Unpacking iterables is the process of assigning the values of an iterable to multiple variables in a single assignment statement.
+- This can be done with any iterable, such as lists, tuples, strings, and iterators.
+
+```python
+list1 = ["apple", "banana", "cherry"]
+
+# Unpack the list into three variables
+a, b, c = list1
+
+# Print the values of the variables
+print(a)
+print(b)
+print(c)
+```
+
+## Extended Unpacking
+
+- Extended unpacking is a feature of Python that allows you to unpack an iterable into multiple variables, even if the iterable contains more elements than there are variables.
+- This can be done using the * operator and the ** operator.
+
+- The * operator can be used to unpack an iterable into a tuple of variables.
+- The number of variables does not have to match the number of elements in the iterable. The excess elements are simply ignored.
+
+```python
+list1 = ["apple", "banana", "cherry", "grape"]
+
+# Unpack the list into three variables
+a, b, *rest = list1
+
+# Print the values of the variables
+print(a)
+print(b)
+print(rest)
+```
+- This code will print the following output:
+```
+apple
+banana
+['cherry', 'grape']
+```
+
+- The ** operator can be used to unpack an iterable into a dictionary of variables.
+- The keys of the dictionary do not have to match the names of the variables.
+```python
+dict1 = {"name": "John Doe", "age": 30, "city": "New York"}
+
+# Unpack the dictionary into two variables
+name, **other_details = dict1
+
+# Print the values of the variables
+print(name)
+print(other_details)
+```
+- This code will print the following output:
+```
+John Doe
+{'age': 30, 'city': 'New York'}
+```
+
