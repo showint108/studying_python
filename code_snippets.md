@@ -20,3 +20,44 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+===
+
+```python
+import paramiko
+
+# Server information
+hostname = "10.10.10.10"
+port = 22
+username = "root"
+password = "root"
+
+try:
+    # Create an SSH client
+    ssh_client = paramiko.SSHClient()
+    ssh_client.load_system_host_keys()
+    
+    # Automatically add the server's host key (this is insecure, do this only for testing)
+    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    
+    try:
+        # Connect to the server
+        ssh_client.connect(hostname, port, username, password)
+    except paramiko.AuthenticationException:
+        print("Authentication failed, please check your credentials.")
+        # Exit or handle the error as needed
+    except paramiko.SSHException as e:
+        print("SSH error:", str(e))
+        # Exit or handle the error as needed
+    
+    # You are now connected. You can execute commands or perform other actions here.
+    # For example, you can run the "ls -l" command and redirect the output to a file:
+    command = "ls -l > example.txt"
+    ssh_client.exec_command(command)
+    
+    # When you're done, close the SSH connection
+    ssh_client.close()
+
+except Exception as e:
+    print("An error occurred:", str(e))
+```
